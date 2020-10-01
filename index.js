@@ -13,7 +13,10 @@ module.exports = class HiddenChannels extends Plugin {
       if (res = true) {
         return args[0].data === Permissions.VIEW_CHANNEL.data || 
                args[0].data === Permissions.SEND_MESSAGES.data ||
-               args[0].data === Permissions.READ_MESSAGE_HISTORY.data;
+               args[0].data === Permissions.READ_MESSAGE_HISTORY.data ||
+               args[0].data === Permissions.CONNECT.data ||
+               args[0].data === Permissions.USE_VAD.data ||
+               args[0].data === Permissions.SPEAK.data;
         
       }
       return res;
